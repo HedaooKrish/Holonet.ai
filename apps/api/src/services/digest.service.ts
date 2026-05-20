@@ -31,7 +31,7 @@ async function sendDigestToUser(userId: string, email: string) {
     }
 
     // Fetch articles from last 24 hours that match their preferences
-    const since = new Date(Date.now() - 24 * 60 * 60 * 1000)
+    const since = new Date(Date.now() - 48 * 60 * 60 * 1000)
 
     const articles = await db.article.findMany({
         where: {
