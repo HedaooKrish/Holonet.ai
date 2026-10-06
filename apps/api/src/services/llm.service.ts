@@ -25,7 +25,7 @@ export async function analyzeArticle(
         const truncated = content.slice(0, 2000)
 
         const response = await client.chat.completions.create({
-            model: 'llama-3.3-70b-versatile',
+            model: 'openai/gpt-oss-120b',
             messages: [
                 {
                     role: 'system',
